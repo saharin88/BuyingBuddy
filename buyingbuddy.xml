@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4.0" type="plugin" group="system" method="upgrade">
+    <name>Buying Buddy IDX CRM</name>
+    <author>Dmytro Sakharuk</author>
+    <creationDate>June 2022</creationDate>
+    <authorEmail>admin@joom.work</authorEmail>
+    <authorUrl>http://joom.work/</authorUrl>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <version>1.0.0</version>
+    <description>
+        <![CDATA[
+        <p style="text-align:left">
+        <img src="https://d2w6u17ngtanmy.cloudfront.net/gfx/bb-logo-200.png"><br />
+             This Plugin adds Buying Buddy into your Joomla! site. <br /><strong>You will need to add your Buying Buddy Account ID (ACID) and Google Map Key in plugin setting.</strong>
+        </p>
+        
+        <p style="margin-top:15px;"><a style="font-size:18px;color:black;" href="/administrator/index.php?option=com_plugins&view=plugins&filter[search]=buying"><mark>Click here to configure BuyingBuddy</mark></a></p>
+
+        <p style="text-align:left;margin-bottom:30px;font-weight:300;">
+        <strong>NOTE:</strong> Require valid subscription to BuyingBuddy CRM
+        </p>
+        ]]>
+    </description>
+
+    <files>
+        <filename plugin="buyingbuddy">buyingbuddy.php</filename>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+
+                <field
+                        name="web_property_id"
+                        type="text"
+                        label="Buying Buddy ID (ACID)"
+                        description="Enter your Buying Buddy ID (ACID) here"
+                        required="true"
+                        default=""
+                />
+                <field
+                        name="gmap_id"
+                        type="text"
+                        label="Google Map Key"
+                        description="Enter your Google Map Key here"
+                        required="true"
+                        default=""
+                />
+
+            </fieldset>
+        </fields>
+    </config>
+
+</extension>
