@@ -37,13 +37,13 @@ class plgSystemBuyingBuddy extends CMSPlugin
 
 		$wa->registerAndUseScript('gmap', 'https://maps.googleapis.com/maps/api/js?key=' . $gmap_id);
 		$wa->registerAndUseScript('mbb2_1', 'https://www.mbb2.com/version3/css/theme/acid/' . $web_property_id);
-		$wa->registerAndUseScript('mbb2_2', 'https://www.mbb2.com/scripts/my-buying-buddy.4.0.js');
+		$wa->registerAndUseScript('mbb2_2', 'https://d2w6u17ngtanmy.cloudfront.net/scripts/my-buying-buddy.5.0.js.gz');
 
 		$js = <<<JS
 var MBB = { mbbUrl: 'https://www.mbb2.com/version3', seo : 'false' };
 MBB.data = { acid : '$web_property_id' };
 JS;
-		$wa->addInlineScript($js);
+		$wa->addInlineScript($js, ['position' => 'before'], [], ['mbb2_2']);
 
 	}
 }
